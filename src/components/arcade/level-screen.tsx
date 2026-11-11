@@ -24,7 +24,7 @@ export function LevelScreen({ activeLevel, onNavigate, onHome }: LevelScreenProp
         <header className="section-heading level-heading">
           <span className="section-index">{level.number} / {level.label}</span>
           <h1>{level.title}<span className="heading-period">.</span></h1>
-          <p className="level-subtitle">{activeLevel === 0 ? "A LITTLE ABOUT THE PLAYER BEHIND THE CODE." : activeLevel === 1 ? "THE UFO SCANS AND EXPLAINS EVERY TECHNOLOGY IN MY INVENTORY." : activeLevel === 2 ? "TRAVEL THROUGH THREE CASTLES TO EXPLORE MY PROFESSIONAL JOURNEY." : activeLevel === 3 ? "MEET DR. BYTE AND EXPLORE THE INVENTION LAB." : "LET'S MAKE THE NEXT LEVEL TOGETHER."}</p>
+          <p className="level-subtitle">{activeLevel === 0 ? "THE PERSON BEHIND THE PRODUCTS." : activeLevel === 1 ? "ZOR-BIT SCANS THE TOOLS I USE TO BUILD SOFTWARE." : activeLevel === 2 ? "FOLLOW THE CAREER SIGNALS AND OPEN EACH MISSION LOG." : activeLevel === 3 ? "INSPECT REAL BUILDS THROUGH THEIR PROBLEM, ENGINEERING AND OUTCOME." : "LET'S MAKE THE NEXT LEVEL TOGETHER."}</p>
         </header>
         <Screen />
       </div>

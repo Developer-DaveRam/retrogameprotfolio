@@ -2,10 +2,10 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Daveram A — Player One | Full Stack Developer",
+  title: "Daveram A — The Developer Kingdom | Interactive Portfolio",
   description:
-    "A retro arcade-inspired portfolio of Daveram A, a Full Stack Developer building with React, Next.js, Node.js and TypeScript.",
-  applicationName: "Player One Portfolio",
+    "Enter the fantasy arcade portfolio of Daveram A. Explore three career castles, an alien-guided technology galaxy, project laboratory and final contact gate.",
+  applicationName: "Daveram Developer Kingdom",
 };
 
 export const viewport: Viewport = {

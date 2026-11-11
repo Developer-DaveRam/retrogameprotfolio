@@ -248,3 +248,96 @@ button{font:inherit}
 @media(prefers-reduced-motion:reduce){.level-content{animation:none}}
 
 .brand{border:0;background:none;color:inherit;cursor:pointer}
+
+
+/* Fantasy castle journey + alien skills lab */
+.castle-intro{display:grid;grid-template-columns:42px 1fr;gap:8px 16px;align-items:center;margin:0 0 35px;padding:22px 25px;background:linear-gradient(110deg,#2b1942,#1b102d);border:1px solid #76539b;box-shadow:5px 5px 0 #0b0614}
+.castle-intro__sigil{grid-row:span 2;display:grid;place-items:center;width:42px;height:42px;border:1px solid #dca8ff;color:var(--pink);font-size:24px;box-shadow:0 0 18px #dca8ff33}
+.castle-intro p{margin:0;color:#d0c1dc;font:11px/1.9 var(--mono)}
+.castle-intro__count{color:var(--cyan);font:6px var(--pixel);letter-spacing:.6px}
+.castle-timeline{display:grid;gap:22px;position:relative}
+.castle-card{display:grid;grid-template-columns:140px minmax(0,1fr);gap:25px;align-items:center;padding:23px;background:linear-gradient(120deg,#211432,#180e29);border:1px solid #49305f;position:relative;transition:border-color .2s,transform .2s}
+.castle-card:hover,.castle-card.is-open{border-color:#bd8be2;box-shadow:0 0 25px #a66bcb20}
+.castle-card--2{background:linear-gradient(120deg,#25172f,#180e29)}
+.castle-card--3{background:linear-gradient(120deg,#2c173d,#180e29)}
+.castle-card__tower{height:135px;position:relative;display:flex;align-items:center;flex-direction:column;justify-content:flex-end;filter:drop-shadow(0 5px 0 #0b0614)}
+.castle-card__flag{position:absolute;top:0;left:calc(50% + 12px);color:var(--pink);font-size:16px;text-shadow:0 0 12px var(--pink)}
+.castle-card__roof{width:100px;height:42px;background:linear-gradient(135deg,#bb86e9,#714b9c);clip-path:polygon(0 100%,50% 0,100% 100%);border-bottom:2px solid #f2c8ff}
+.castle-card__body{width:84px;height:72px;background:repeating-linear-gradient(90deg,#573875 0 18px,#704b91 19px 37px);border:2px solid #c397e6;border-bottom:0;display:flex;justify-content:space-evenly;align-items:center}
+.castle-card__body span{width:12px;height:22px;background:#130b21;border:2px solid #d4a8f4;border-bottom:0;border-radius:9px 9px 0 0}
+.castle-card__base{width:112px;height:13px;background:#9b70bd;border:2px solid #d7a9f3}
+.castle-card--2 .castle-card__roof{background:linear-gradient(135deg,#70b8d4,#426b9b)}
+.castle-card--2 .castle-card__body{background:repeating-linear-gradient(90deg,#29486d 0 18px,#3e6692 19px 37px)}
+.castle-card--2 .castle-card__base{background:#5288ac}
+.castle-card--3 .castle-card__roof{background:linear-gradient(135deg,#f0a4d4,#a74787)}
+.castle-card--3 .castle-card__body{background:repeating-linear-gradient(90deg,#66365f 0 18px,#8b4b7e 19px 37px)}
+.castle-card--3 .castle-card__base{background:#b55d9c}
+.castle-card__content{min-width:0}
+.castle-card__toggle{width:100%;display:flex;align-items:center;gap:15px;padding:0 0 14px;border:0;border-bottom:1px solid var(--line);background:none;color:inherit;text-align:left;cursor:pointer}
+.castle-card__number{font:7px var(--pixel);color:var(--pink)}
+.castle-card__period{font:7px var(--pixel);color:#9d8cad}
+.castle-card__chevron{margin-left:auto;color:var(--cyan);transition:transform .2s}
+.castle-card.is-open .castle-card__chevron{transform:rotate(180deg)}
+.castle-card__content h3{font:700 23px var(--sans);margin:17px 0 5px;color:#fff}
+.castle-card__content h4{font:8px var(--pixel);color:var(--cyan);margin:0 0 14px}
+.castle-card__content h4 span{color:#9d8cad}
+.castle-card__story{font:11px/1.9 var(--mono);color:#b9a9c8;margin:0}
+.castle-card__hint{display:block;margin-top:18px;color:var(--pink);font:6px var(--pixel)}
+.castle-card__details{margin-top:21px;animation:level-enter .22s ease both}
+.castle-guide{display:grid;grid-template-columns:46px 1fr;gap:13px;padding:15px;background:#120b20;border:1px solid #684b82}
+.castle-guide__avatar{width:46px;height:46px;display:grid;place-items:center;background:#39244e;color:var(--pink);border:1px solid #a27ac1}
+.castle-guide>div:last-child>span{font:6px var(--pixel);color:var(--cyan)}
+.castle-guide p{font:10px/1.8 var(--mono);color:#d1c1df;margin:8px 0 0}
+.castle-achievements{display:grid;gap:11px;padding:18px 2px 0}
+.castle-achievements__title{font:6px var(--pixel);color:var(--pink);margin-bottom:4px}
+.castle-achievements>div{display:flex;align-items:flex-start;gap:9px;color:#b9a9c8;font:10px/1.7 var(--mono)}
+.castle-achievements svg{flex:none;color:#8affb4;margin-top:2px}
+.alien-transmission{display:grid;grid-template-columns:105px 1fr;gap:22px;align-items:center;margin-bottom:28px;padding:22px 25px;background:linear-gradient(110deg,#172b3a,#211432);border:1px solid #5c82a1;box-shadow:5px 5px 0 #0b0614}
+.alien-transmission__ufo{height:76px;position:relative;display:grid;place-items:center;color:#a5f4ff}
+.alien-transmission__ufo:before{content:"";position:absolute;top:8px;width:40px;height:27px;border:2px solid #a5f4ff;border-bottom:0;border-radius:30px 30px 0 0;background:#4d8ca5}
+.alien-transmission__ufo:after{content:"";position:absolute;top:32px;width:86px;height:25px;border:2px solid #c4f5ff;border-radius:50%;background:linear-gradient(#9eeafa,#3c7399);box-shadow:0 0 22px #78e8f5aa}
+.alien-transmission__ufo svg{z-index:1;margin-top:20px}
+.alien-transmission__ufo span{position:absolute;z-index:2;top:47px;width:5px;height:5px;border-radius:50%;background:#fff6b3;box-shadow:0 0 8px #fff6b3}
+.alien-transmission__ufo span:nth-child(1){left:22px}.alien-transmission__ufo span:nth-child(2){left:49px}.alien-transmission__ufo span:nth-child(3){right:22px}
+.alien-transmission__copy>span{display:flex;align-items:center;gap:7px;color:var(--cyan);font:6px var(--pixel)}
+.alien-transmission__copy h3{font:700 21px var(--sans);color:#fff;margin:12px 0 7px}
+.alien-transmission__copy p{font:10px/1.8 var(--mono);color:#c4b8d1;margin:0}
+.alien-transmission__copy small{display:block;margin-top:12px;color:var(--pink);font:6px var(--pixel)}
+.alien-detail{border-color:#65b9cb;background:linear-gradient(110deg,#183346,#1b102d)}
+.alien-detail .detail-panel__eyebrow{color:var(--cyan)}
+.scientist-brief{display:grid;grid-template-columns:95px 1fr;gap:22px;align-items:center;margin-bottom:28px;padding:22px 25px;background:linear-gradient(110deg,#2b1b36,#1b102d);border:1px solid #8a659e;box-shadow:5px 5px 0 #0b0614}
+.scientist-brief__portrait{height:86px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#38244b;border:1px solid #9d77b5;color:var(--pink)}
+.scientist-brief__portrait span{font:6px var(--pixel)}
+.scientist-brief h3{font:700 21px var(--sans);margin:11px 0 6px;color:#fff}
+.scientist-brief p{font:10px/1.8 var(--mono);color:#b9a9c8;margin:0}
+.scientist-quote{margin:22px 0 0!important;padding:13px 15px;border-left:2px solid var(--pink);background:#120b20;color:#d8c5e5!important;font-style:italic}
+@media(max-width:640px){
+ .castle-intro{grid-template-columns:32px 1fr;padding:16px;gap:8px 12px}
+ .castle-intro__sigil{width:32px;height:32px;font-size:18px}
+ .castle-intro p{font-size:9px}
+ .castle-intro__count{font-size:5px;line-height:1.8}
+ .castle-card{grid-template-columns:72px minmax(0,1fr);gap:13px;padding:14px 11px}
+ .castle-card__tower{height:104px;transform:scale(.72);transform-origin:center}
+ .castle-card__toggle{gap:7px;flex-wrap:wrap;padding-bottom:10px}
+ .castle-card__number,.castle-card__period{font-size:5px}
+ .castle-card__content h3{font-size:17px;margin-top:13px}
+ .castle-card__content h4{font-size:6px;line-height:1.8}
+ .castle-card__story{font-size:9px}
+ .castle-card__hint{font-size:5px;line-height:1.8}
+ .castle-guide{grid-template-columns:34px 1fr;padding:10px;gap:9px}
+ .castle-guide__avatar{width:34px;height:34px}
+ .castle-guide__avatar svg{width:17px}
+ .castle-guide>div:last-child>span,.castle-achievements__title{font-size:5px;line-height:1.8}
+ .castle-guide p,.castle-achievements>div{font-size:9px}
+ .alien-transmission{grid-template-columns:60px 1fr;gap:12px;padding:15px}
+ .alien-transmission__ufo{transform:scale(.68)}
+ .alien-transmission__copy>span{font-size:5px;line-height:1.8}
+ .alien-transmission__copy h3,.scientist-brief h3{font-size:16px}
+ .alien-transmission__copy p,.scientist-brief p{font-size:9px}
+ .alien-transmission__copy small{font-size:5px;line-height:1.8}
+ .scientist-brief{grid-template-columns:65px 1fr;gap:12px;padding:15px}
+ .scientist-brief__portrait{height:70px}
+ .scientist-brief__portrait svg{width:23px}
+ .scientist-brief__portrait span{font-size:5px}
+ .project-modal .scientist-quote{font-size:9px}
+}

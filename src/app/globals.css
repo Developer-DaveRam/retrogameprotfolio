@@ -519,3 +519,175 @@ button{font:inherit}
 }
 @keyframes ufo-hover-mobile{0%,100%{transform:scale(.78) translateY(0)}50%{transform:scale(.78) translateY(-9px)}}
 @media(prefers-reduced-motion:reduce){.level-transition,.level-heading,.ufo-craft,.scientist-character,.final-gate__portal,.level-nav-button--next:after{animation:none!important;transition:none!important}}
+
+
+/* 2026 visual refresh: deep graphite, electric teal and acid-lime signal colors */
+:root{
+  --bg:#07131b;--panel:#10232d;--panel2:#17333d;
+  --pink:#65f0dc;--pink2:#28cdbd;--purple:#8fe6cf;--cyan:#c6ff72;
+  --text:#effffb;--muted:#9bb8b5;--line:rgba(101,240,220,.22);
+  --pixel:'Press Start 2P',monospace;--mono:'Space Mono',monospace;--sans:'Syne',sans-serif
+}
+body{background:#07131b;color:#effffb}
+.arcade-shell{background:radial-gradient(ellipse at 50% 8%,#123744 0%,#0a1c27 44%,#07131b 82%)}
+.topbar{background:rgba(7,19,27,.88);border-color:rgba(101,240,220,.2)}
+.brand-mark{background:#65f0dc;color:#071a20;box-shadow:4px 4px 0 #237d78}
+.nav-link:hover,.nav-link--active{color:#c6ff72;text-shadow:0 0 14px #c6ff7270}
+.status-light,.hint-dot{background:#c6ff72;box-shadow:0 0 10px #c6ff72}
+.hero:before{background:radial-gradient(ellipse at 32% 38%,rgba(36,181,170,.18),transparent 48%),linear-gradient(180deg,transparent 65%,#07131b 100%)}
+.hero-kicker,.hero-subtitle,.eyebrow,.section-index,.heading-period{color:#c6ff72}
+.hero-title{ text-shadow:0 5px 0 #155e63,0 10px 32px #65f0dc30}
+.hero-title-accent{color:#65f0dc;text-shadow:0 5px 0 #126c69,0 0 35px #65f0dc55}
+.hero-subtitle{background:#65f0dc14;border-color:#65f0dc66}
+.pixel-button{background:#c6ff72;color:#102018;border-color:#eaffc8;box-shadow:0 5px 0 #638e32,0 0 25px #c6ff722b}
+.pixel-button:hover{box-shadow:0 8px 0 #638e32,0 0 30px #c6ff7266}
+.pixel-button--secondary{background:transparent;color:#65f0dc;border-color:#65f0dc;box-shadow:0 5px 0 #1d6b68}
+.text-action:hover{color:#c6ff72}
+.game-divider{background:#0d222b;border-color:var(--line)}
+.content-section{color:var(--text)}
+.section-heading h2{ text-shadow:0 4px 0 #17464c}
+.profile-card{background:linear-gradient(145deg,#15313a,#0b1d27);border-color:#397f7d;box-shadow:8px 8px 0 #030b10}
+.profile-card:after{border-color:#65f0dc22}
+.avatar-frame{background:radial-gradient(circle,#1e6668,#10242d 68%);border-color:#438b83}
+.avatar-pixel{background:#c6ff72;box-shadow:0 0 30px #c6ff7255}
+.avatar-pixel span{color:#18302b}
+.profile-crown{color:#c6ff72;text-shadow:0 0 13px #c6ff72}
+.terminal-label,.profile-facts svg{color:#65f0dc!important}
+.about-copy h3 span{color:#65f0dc}
+.stat-row strong{color:#c6ff72}
+.stat-row strong span{color:#65f0dc}
+.skill-card,.quest-content,.project-card{background:linear-gradient(145deg,#132c36,#0b1c26);border-color:#28515a}
+.skill-card:hover,.project-card:hover{border-color:#65f0dc}
+.skill-icon,.project-title-row>span{color:#65f0dc}
+.skill-level i{background:#c6ff72;box-shadow:0 0 6px #c6ff72}
+.quest-meta,.quest-content li::marker{color:#c6ff72}
+.quest-content h4{color:#65f0dc}
+.project-art{background:radial-gradient(circle at 50% 55%,#246b70,#102b35 70%)}
+.project-card--pink .project-art,.project-card--blue .project-art{background:radial-gradient(circle at 50% 55%,#245c61,#10232d 70%)}
+.project-symbol{border-color:#65f0dc;color:#c6ff72;background:#102b34;box-shadow:6px 6px 0 #246c6c,0 0 30px #65f0dc30}
+.tag-list span{color:#c6ff72;border-color:#356b68;background:#102e34}
+.github-link{color:#65f0dc;border-color:#397f7d}
+.contact-section{background:radial-gradient(ellipse at 50% 70%,#16464a 0%,#0c252e 50%,#07131b 85%);border-color:var(--line)}
+.contact-section h2{ text-shadow:0 5px 0 #155e63}
+.contact-section h2 span:not(.heading-period){color:#c6ff72}
+.final-gate__portal{border-color:#65f0dc;background:radial-gradient(circle,#65f0dc38,#07131b 70%);box-shadow:0 0 0 9px #65f0dc0b,0 0 45px #65f0dc44}
+.final-gate__portal span{color:#c6ff72;text-shadow:0 0 14px #c6ff72}
+.final-gate__portal span:nth-child(2){color:#65f0dc}
+.level-screen__topline{color:#a4c4c1}
+.level-nav-button--next{background:#c6ff72!important;color:#102018!important}
+.level-nav-button--next:after{background:linear-gradient(100deg,transparent,#ffffff65,transparent)}
+.filter-chip.is-active,.filter-chip:hover{border-color:#65f0dc!important;color:#65f0dc!important;background:#65f0dc12!important}
+.detail-panel{background:linear-gradient(120deg,#14313a,#0b1c26)!important;border-color:#65f0dc!important}
+.detail-panel__eyebrow,.detail-panel__status{color:#c6ff72!important}
+.ufo-command{background:radial-gradient(ellipse at 20% 50%,#1e737166,transparent 65%),linear-gradient(110deg,#0d2633,#102b34);border-color:#65f0dc;box-shadow:0 0 30px #65f0dc18,inset 0 0 35px #2c9a9a18}
+.ufo-command__message{border-left-color:#65f0dc;background:#071923cc}
+.ufo-command__message>span{color:#c6ff72}
+.ufo-command__message small{color:#65f0dc}
+.ufo-craft__dome{border-color:#c6ff72;background:linear-gradient(140deg,#eaffcaaa,#43b9a8aa 65%,#16465a)}
+.ufo-craft__saucer{border-color:#b9fff2;background:linear-gradient(180deg,#d6fff5,#3d9c98 60%,#174c58);box-shadow:0 0 18px #65f0dc,inset 0 -7px 0 #174c58}
+.ufo-craft__rim{background:#c6ff72;box-shadow:0 0 20px #c6ff72}
+.castle-world__intro{color:#65f0dc}
+.castle-landscape{background:linear-gradient(180deg,#0b2635 0%,#17434b 53%,#28534b 100%);border-color:#4e9990}
+.castle-moon{background:#d8ff9b;box-shadow:0 0 35px #c6ff7288}
+.castle-mountains{background:#17404a}
+.castle-mountains--front{background:#102f39}
+.landmark-castle__structure:before{background:linear-gradient(90deg,#20515b,#438b85,#173c49);border-color:#65f0dc}
+.landmark-castle__structure i{background:linear-gradient(90deg,#20515b,#438b85,#20515b);border-color:#8de8d6}
+.landmark-castle__structure i:before{background:#65f0dc}
+.landmark-castle__structure i:after{background:#c6ff72;box-shadow:0 0 12px #c6ff72}
+.landmark-castle__company{border-color:#65f0dc}
+.landmark-castle--2 .landmark-castle__structure:before,.landmark-castle--2 .landmark-castle__structure i{background:linear-gradient(90deg,#1b4e65,#3b8497,#1b4e65)}
+.landmark-castle--2 .landmark-castle__structure i:before{background:#65c9dc}
+.landmark-castle--3 .landmark-castle__structure:before,.landmark-castle--3 .landmark-castle__structure i{background:linear-gradient(90deg,#35634b,#74a96a,#35634b)}
+.landmark-castle--3 .landmark-castle__structure i:before{background:#c6ff72}
+.castle-story-panel{background:linear-gradient(120deg,#14313a,#0a1c26);border-color:#438b83;box-shadow:5px 5px 0 #030b10}
+.castle-story-panel__heading,.castle-story-panel h4{color:#65f0dc}
+.castle-story-panel__seal{border-color:#65f0dc;color:#c6ff72}
+.castle-world__controls button{background:#102630;border-color:#28545c}
+.castle-world__controls button.is-active{border-color:#65f0dc;color:#c6ff72;background:#174047}
+.lab-scene{background:linear-gradient(180deg,#102b38,#1d4c50 72%,#102630);border-color:#65f0dc}
+.lab-scene__window{background:linear-gradient(#102d3d,#477c77);border-color:#35666a}
+.lab-scene__bench{border-top-color:#c6ff72;background:linear-gradient(90deg,#264c4a,#142e35)}
+.lab-scene__bench i{border-color:#65f0dc;box-shadow:0 0 12px #65f0dc55}
+.scientist-speech{background:#eaffd7;border-color:#c6ff72;color:#18352d;box-shadow:5px 5px 0 #030b10}
+.scientist-speech:before{border-color:transparent #c6ff72 transparent transparent}
+.scientist-speech>span{color:#376c54}
+.scientist-speech p{color:#234b40}
+.lab-scene__title{color:#c6ff72}
+.project-card--chosen{border-color:#c6ff72!important;box-shadow:0 0 0 2px #c6ff7244,0 0 25px #c6ff722e!important}
+.project-modal{background:#0c2029!important;border-color:#65f0dc!important}
+.project-modal__close{color:#c6ff72!important}
+.case-study-block{border-color:#356b68!important;background:#102a32!important}
+.case-study-block>span{color:#c6ff72!important}
+.scientist-quote{color:#65f0dc!important}
+.interaction-hint{color:#9bb8b5!important}
+
+/* Career map replaces the castle metaphor with interactive orbital mission nodes */
+.mission-intro{display:flex;align-items:center;gap:14px;margin:0 0 18px}
+.mission-intro>span{display:flex;align-items:center;gap:8px;color:#c6ff72;font:7px var(--pixel);white-space:nowrap}
+.mission-intro p{margin:0;color:#b4ceca;font:10px/1.8 var(--mono)}
+.mission-map{height:430px;position:relative;overflow:hidden;border:1px solid #347b7a;background:radial-gradient(ellipse at 50% 54%,#1a5b61 0%,#10313d 43%,#091b27 78%);box-shadow:inset 0 0 70px #020c12,0 12px 35px #0005}
+.mission-map:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#d9fff1 1px,transparent 1.5px);background-size:43px 39px;opacity:.34}
+.mission-map__orbit{position:absolute;border:1px solid #65f0dc30;border-radius:50%;transform:rotate(-18deg)}
+.mission-map__orbit--one{width:76%;height:64%;left:12%;top:18%}
+.mission-map__orbit--two{width:56%;height:95%;left:22%;top:2%;transform:rotate(48deg)}
+.mission-map__planet{position:absolute;border-radius:50%;filter:blur(.2px)}
+.mission-map__planet--large{width:130px;height:130px;right:12%;top:14%;background:radial-gradient(circle at 35% 30%,#c6ff72,#559d73 38%,#16424d 72%);box-shadow:0 0 50px #65f0dc35}
+.mission-map__planet--small{width:45px;height:45px;left:15%;bottom:18%;background:radial-gradient(circle at 35% 30%,#e2fff2,#4ab8aa 45%,#16404a);box-shadow:0 0 24px #65f0dc66}
+.mission-map__route{position:absolute;left:17%;top:53%;width:66%;height:1px;background:linear-gradient(90deg,transparent,#c6ff72,#65f0dc,transparent);transform:rotate(-13deg);box-shadow:0 0 12px #65f0dc}
+.mission-map__label,.mission-map__footer{position:absolute;left:20px;color:#8fbdb7;font:6px var(--pixel);letter-spacing:1px}
+.mission-map__label{top:19px}.mission-map__footer{bottom:17px;left:0;right:0;text-align:center}
+.mission-node{position:absolute;z-index:3;width:170px;min-height:130px;border:0;background:transparent;color:#eafff9;display:flex;align-items:center;flex-direction:column;cursor:pointer;transition:transform .35s cubic-bezier(.2,.8,.2,1),filter .35s}
+.mission-node--1{left:9%;top:39%}.mission-node--2{left:39%;top:17%}.mission-node--3{right:7%;top:45%}
+.mission-node__signal{position:absolute;top:0;width:100px;height:100px;border:1px solid #65f0dc35;border-radius:50%;animation:mission-ping 3s ease-out infinite}
+.mission-node__signal i{position:absolute;inset:9px;border:1px solid #65f0dc35;border-radius:50%}
+.mission-node__signal i:nth-child(2){inset:19px}.mission-node__signal i:nth-child(3){inset:29px}
+.mission-node__core{position:relative;z-index:2;margin:25px 0 12px;width:50px;height:50px;display:grid;place-items:center;border:1px solid #c6ff72;border-radius:50%;color:#c6ff72;background:#0b2631;box-shadow:0 0 0 7px #c6ff7212,0 0 25px #65f0dc55;transition:transform .35s,background .35s}
+.mission-node strong{font:8px var(--pixel);text-shadow:0 2px 5px #000}
+.mission-node__number{color:#65f0dc;font:6px var(--pixel);margin-bottom:7px}
+.mission-node small{margin-top:8px;color:#b4ceca;font:5px var(--pixel)}
+.mission-node:hover,.mission-node.is-selected{transform:translateY(-8px) scale(1.06);filter:drop-shadow(0 0 16px #65f0dc66)}
+.mission-node.is-selected .mission-node__core{background:#c6ff72;color:#0b2631;transform:rotate(12deg)}
+@keyframes mission-ping{0%{transform:scale(.78);opacity:.9}100%{transform:scale(1.45);opacity:0}}
+.mission-brief{margin-top:22px;padding:25px;background:linear-gradient(130deg,#12323b,#0a1d28);border:1px solid #397e7b;box-shadow:6px 6px 0 #030b10;animation:world-arrive .48s cubic-bezier(.2,.8,.2,1) both}
+.mission-brief__top,.mission-brief__divider{display:flex;justify-content:space-between;gap:12px;color:#65f0dc;font:6px var(--pixel);letter-spacing:.5px}
+.mission-brief__status{color:#c6ff72}.mission-brief__status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#c6ff72;box-shadow:0 0 8px #c6ff72}
+.mission-brief__heading{display:flex;justify-content:space-between;align-items:center;margin:25px 0 12px}
+.mission-brief__heading>div>span{color:#9bb8b5;font:6px var(--pixel)}
+.mission-brief h3{margin:10px 0 6px;color:#effffb;font:700 28px var(--sans)}
+.mission-brief h4{margin:0;color:#c6ff72;font:7px var(--pixel)}
+.mission-brief__stamp{width:54px;height:54px;border:1px solid #65f0dc;border-radius:50%;display:grid;place-items:center;color:#c6ff72;box-shadow:0 0 24px #65f0dc22}
+.mission-brief__story{max-width:850px;color:#bad1ce;font:11px/2 var(--mono)}
+.mission-brief__divider{padding:18px 0 13px;border-bottom:1px solid #65f0dc35}
+.mission-brief__divider span:last-child{color:#8faeaa}
+.mission-brief__tasks{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;padding:19px 0}
+.mission-brief__tasks div{display:flex;align-items:flex-start;gap:9px;color:#c2d9d5;font:10px/1.8 var(--mono)}
+.mission-brief__tasks svg{flex:none;margin-top:2px;color:#c6ff72}
+.mission-brief__quote{margin:8px 0 0;padding:14px 17px;border-left:2px solid #65f0dc;background:#65f0dc0b;color:#9ddbd0;font:italic 10px/1.8 var(--mono)}
+.mission-selector{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.mission-selector button{display:flex;align-items:center;gap:9px;padding:11px 14px;border:1px solid #28545c;background:#102630;color:#b4ceca;font:6px var(--pixel);cursor:pointer;transition:all .25s}
+.mission-selector button span{color:#65f0dc}
+.mission-selector button.is-active{border-color:#c6ff72;color:#c6ff72;background:#c6ff7210;box-shadow:0 0 18px #c6ff7215}
+.mission-selector button:hover{transform:translateY(-3px);border-color:#65f0dc}
+@media(max-width:700px){
+ .mission-intro{align-items:flex-start;flex-direction:column;gap:7px}
+ .mission-map{height:355px}
+ .mission-map__planet--large{width:75px;height:75px;right:6%;top:13%}
+ .mission-map__planet--small{width:28px;height:28px;left:8%;bottom:17%}
+ .mission-node{width:112px;min-height:110px}
+ .mission-node--1{left:-2%;top:43%}.mission-node--2{left:32%;top:20%}.mission-node--3{right:-3%;top:49%}
+ .mission-node__signal{width:72px;height:72px}
+ .mission-node__core{width:39px;height:39px;margin:17px 0 10px}
+ .mission-node__core svg{width:19px;height:19px}
+ .mission-node strong{font-size:6px}
+ .mission-node__number,.mission-node small{font-size:4px}
+ .mission-map__label,.mission-map__footer{font-size:4px;line-height:1.8}
+ .mission-brief{padding:16px}
+ .mission-brief__top,.mission-brief__divider{font-size:4px;line-height:1.8}
+ .mission-brief h3{font-size:22px}
+ .mission-brief__tasks{grid-template-columns:1fr;gap:9px}
+ .mission-brief__tasks div{font-size:9px}
+ .mission-brief__stamp{width:42px;height:42px}
+ .mission-selector button{font-size:5px;padding:9px}
+}
+@media(prefers-reduced-motion:reduce){.mission-node__signal{animation:none!important}.mission-node,.mission-selector button{transition:none!important}}

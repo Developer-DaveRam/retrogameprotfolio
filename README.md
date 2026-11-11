@@ -1,14 +1,14 @@
-# Daveram A — The Developer Kingdom
+# Daveram A — Signal Run | Interactive Developer Portfolio
 
-An interactive fantasy-castle and retro-arcade portfolio for **Daveram A**, a Full Stack Developer. Explore the portfolio as a five-level adventure: enter the kingdom, scan the skills galaxy with an alien guide, unlock three career castles, inspect project case files in a scientist's laboratory, and reach the final contact gate.
+An interactive sci-fi mission-map and retro-arcade portfolio for **Daveram A**, a Full Stack Developer. Explore a five-level developer experience: meet the player, scan the skills inventory with an alien guide, travel across three career mission nodes, inspect engineering build reviews, and reach the contact channel.
 
 ## Experience
 
-- **Opening Kingdom:** Pixel-art castle skyline, animated stars, floating UFO, and a Start Adventure intro.
-- **Level 01 — The Kingdom:** Player profile, education, location and developer overview.
+- **Opening Signal:** Pixel-art skyline, animated stars, floating UFO, and a Start Adventure intro.
+- **Level 01 — Player Profile:** Player profile, education, location and developer overview.
 - **Level 02 — Alien Tech:** Filterable skills inventory. The alien character introduces the technology loadout and explains each selected skill.
-- **Level 03 — Three Castles:** Three expandable experience castles for GAOGAO, NAFNAF and Skyraan Technologies. Each castle has a guide character, timeline, story and achievement list.
-- **Level 04 — Project Laboratory:** Project cards open scientist-style case files with problem, implementation and outcome.
+- **Level 03 — Career Missions:** Three interactive orbital mission nodes for GAOGAO, NAFNAF and Skyraan Technologies. Each mission opens a timeline, role summary and field notes.
+- **Level 04 — Build Reviews:** Project cards open engineering breakdowns with context, technical decisions and outcomes.
 - **Level 05 — Final Gate:** Contact links for LinkedIn and GitHub.
 
 ## Technology

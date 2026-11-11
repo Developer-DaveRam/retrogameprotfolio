@@ -8,6 +8,10 @@ export const levels = [
 
 export const skills = [
   { name: "JavaScript", category: "LANGUAGE", level: "ADVANCED", note: "Modern JavaScript, async programming, closures, promises and event-driven application logic." },
+  { name: "HTML5", category: "FRONTEND", level: "WORKING", note: "Semantic page structure, accessible markup and practical web layouts." },
+  { name: "CSS3", category: "FRONTEND", level: "WORKING", note: "Responsive styling, layouts, transitions and custom visual effects." },
+  { name: "C# / .NET", category: "LANGUAGE", level: "PROJECT EXPOSURE", note: "Used during an internship project involving a shared-meals application, database and API tasks." },
+  { name: "Socket APIs", category: "BACKEND", level: "WORKING", note: "Real-time communication concepts and event-driven API workflows." },
   { name: "TypeScript", category: "LANGUAGE", level: "ADVANCED", note: "Typed application logic, interfaces, reusable types and maintainable API contracts." },
   { name: "Node.js", category: "BACKEND", level: "ADVANCED", note: "Backend services, REST APIs, authentication flows, integrations and business workflows." },
   { name: "Express.js", category: "BACKEND", level: "ADVANCED", note: "REST API architecture, routing, middleware, validation and controller/service patterns." },

@@ -383,3 +383,139 @@ button{font:inherit}
  .final-gate__portal span:nth-child(2){font-size:25px}
  .final-gate__eyebrow{font-size:5px}
 }
+
+
+/* --- Cinematic interactive world update --- */
+.level-transition{animation:world-arrive .72s cubic-bezier(.18,.75,.2,1) both;transform-origin:center}
+@keyframes world-arrive{0%{opacity:0;transform:translateY(35px) scale(.975);filter:blur(8px)}55%{opacity:1;filter:blur(0)}100%{opacity:1;transform:translateY(0) scale(1)}}
+.level-heading{animation:heading-arrive .65s ease both}
+@keyframes heading-arrive{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:translateX(0)}}
+.level-nav-button--next{position:relative;overflow:hidden}
+.level-nav-button--next:after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(100deg,transparent,#ffffff35,transparent);animation:button-shine 3s ease-in-out infinite}
+@keyframes button-shine{0%,65%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+/* UFO is the host and narrator of the complete skill galaxy */
+.ufo-command{display:grid;grid-template-columns:minmax(190px,.75fr) minmax(0,1.25fr);align-items:center;gap:24px;margin:0 0 28px;padding:22px 26px;min-height:220px;overflow:hidden;position:relative;background:radial-gradient(ellipse at 20% 50%,#28546a66,transparent 65%),linear-gradient(110deg,#101e35,#1d1232);border:1px solid #5b91b0;box-shadow:0 0 30px #5fd9f022,inset 0 0 35px #2c7e9a18}
+.ufo-command__sky{height:170px;position:relative;display:grid;place-items:center;overflow:hidden}
+.ufo-command__stars{position:absolute;top:15px;left:0;width:100%;color:#d4f7ff;white-space:nowrap;font-size:17px;letter-spacing:4px;opacity:.65;animation:star-drift 8s linear infinite}
+.ufo-craft{position:relative;z-index:2;width:156px;height:110px;display:flex;align-items:center;flex-direction:column;animation:ufo-hover 3s ease-in-out infinite;filter:drop-shadow(0 8px 16px #63eaff55)}
+.ufo-craft__dome{width:62px;height:48px;display:grid;place-items:center;border:2px solid #a6f2ff;border-bottom:0;border-radius:50px 50px 8px 8px;background:linear-gradient(140deg,#d3ffffaa,#3c9bb8aa 65%,#183b65);box-shadow:inset 0 0 18px #fff9}
+.alien-head{font:17px var(--mono);color:#eaffff;text-shadow:0 0 10px #fff}
+.ufo-craft__saucer{position:relative;z-index:2;width:156px;height:42px;margin-top:-4px;border:3px solid #baf8ff;border-radius:50%;background:linear-gradient(180deg,#baf7ff,#478db3 60%,#24426d);box-shadow:0 0 18px #7ceeff,inset 0 -7px 0 #1b4168;display:flex;align-items:flex-end;justify-content:space-evenly;padding-bottom:6px}
+.ufo-craft__saucer i{width:7px;height:7px;border-radius:50%;background:#fff4a9;box-shadow:0 0 9px #fff4a9;animation:beacon 1s steps(2) infinite}
+.ufo-craft__saucer i:nth-child(even){animation-delay:.5s}
+.ufo-craft__rim{height:5px;width:120px;margin-top:-1px;border-radius:50%;background:#c7faff;box-shadow:0 0 20px #8defff}
+.ufo-beam-large{position:absolute;z-index:1;top:91px;width:120px;height:100px;background:linear-gradient(180deg,#9df8ff55,transparent);clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);filter:blur(3px);animation:beam-pulse 2.4s ease-in-out infinite}
+.ufo-command__message{position:relative;z-index:3;padding:16px 19px;border-left:2px solid var(--cyan);background:#0c1527aa;box-shadow:0 0 22px #63d9f018}
+.ufo-command__message>span{display:flex;align-items:center;gap:7px;color:var(--cyan);font:6px var(--pixel)}
+.ufo-command__message h3{font:700 22px var(--sans);color:#fff;margin:13px 0 8px}
+.ufo-command__message p{font:10px/1.9 var(--mono);color:#c9e2eb;margin:0}
+.ufo-command__message small{display:block;margin-top:13px;color:var(--pink);font:6px var(--pixel)}
+.alien-detail{animation:world-arrive .35s ease both}
+.alien-detail .detail-panel__eyebrow{display:flex;align-items:center;gap:7px}
+@keyframes ufo-hover{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+@keyframes beacon{50%{opacity:.25}}
+@keyframes beam-pulse{0%,100%{opacity:.4;transform:scaleX(.9)}50%{opacity:.85;transform:scaleX(1.08)}}
+@keyframes star-drift{0%{transform:translateX(0)}100%{transform:translateX(-25px)}}
+
+/* Three distant castles: foreground, middle distance and far horizon */
+.castle-world__intro{display:flex;align-items:center;gap:10px;margin:0 0 17px;color:var(--cyan)}
+.castle-world__intro p{margin:0;color:#c6b7d5;font:10px/1.8 var(--mono)}
+.castle-landscape{height:440px;position:relative;overflow:hidden;border:1px solid #6e4b8e;background:linear-gradient(180deg,#111a38 0%,#302451 53%,#50365e 100%);box-shadow:inset 0 -35px 70px #10091f88,0 8px 30px #0005}
+.castle-landscape:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 20%,#f3d7ff18 0 2px,transparent 3px),radial-gradient(circle at 18% 18%,#fff 0 1px,transparent 2px),radial-gradient(circle at 38% 28%,#fff 0 1px,transparent 2px),radial-gradient(circle at 62% 12%,#fff 0 1px,transparent 2px),radial-gradient(circle at 90% 40%,#fff 0 1px,transparent 2px);background-size:170px 130px;opacity:.8}
+.castle-moon{position:absolute;top:43px;right:15%;width:67px;height:67px;border-radius:50%;background:#f4d8ff;box-shadow:0 0 35px #e7b8ff88}
+.castle-mountains{position:absolute;left:-5%;right:-5%;bottom:85px;height:210px;background:#30264c;clip-path:polygon(0 100%,0 75%,13% 38%,22% 68%,37% 10%,52% 70%,67% 28%,82% 68%,94% 35%,100% 74%,100% 100%)}
+.castle-mountains--front{bottom:40px;height:160px;background:#211b3c;clip-path:polygon(0 100%,0 55%,15% 25%,30% 70%,48% 30%,63% 75%,81% 20%,100% 65%,100% 100%)}
+.castle-road{position:absolute;z-index:2;bottom:-15px;left:0;width:100%;height:145px;background:linear-gradient(170deg,transparent 0 32%,#b48a9b22 33% 37%,#160f2a 38%);clip-path:polygon(43% 0,57% 0,100% 100%,0 100%)}
+.landmark-castle{position:absolute;z-index:3;bottom:95px;width:190px;height:250px;padding:0;border:0;background:none;color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;transition:filter .25s,transform .3s}
+.landmark-castle__structure{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:5px;width:100%;height:180px;filter:drop-shadow(0 8px 5px #0c0919aa)}
+.landmark-castle__structure:before{content:"";position:absolute;bottom:0;width:116px;height:95px;background:linear-gradient(90deg,#4c326d,#8860a3,#39234f);border:3px solid #bd93d8;border-bottom:0}
+.landmark-castle__structure i{position:relative;z-index:1;width:39px;height:137px;background:linear-gradient(90deg,#51336e,#9b73b6,#51336e);border:3px solid #c8a0df;border-bottom:0}
+.landmark-castle__structure i:before{content:"";position:absolute;top:-28px;left:-4px;width:40px;height:29px;background:#b78bd0;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.landmark-castle__structure i:after{content:"";position:absolute;top:57px;left:10px;width:12px;height:21px;background:#ffe5a7;border-radius:9px 9px 0 0;box-shadow:0 0 12px #ffe5a7}
+.landmark-castle__structure b{position:absolute;z-index:2;bottom:0;width:32px;height:54px;border:3px solid #d6b3ed;border-bottom:0;border-radius:20px 20px 0 0;background:#1b112d}
+.landmark-castle__label{font:6px var(--pixel);color:#f6d5ff;margin-bottom:7px;text-shadow:0 2px 5px #000}
+.landmark-castle__company{position:relative;z-index:4;margin-top:8px;padding:5px 8px;background:#160e28cc;border:1px solid #a17bb9;font:6px var(--pixel);color:#fff}
+.landmark-castle__prompt{position:relative;z-index:4;margin-top:5px;font:5px var(--pixel);color:#b8eefa;opacity:.75}
+.landmark-castle--1{left:7%;bottom:76px;transform:scale(.57);transform-origin:bottom center;filter:brightness(.72);z-index:2}
+.landmark-castle--2{left:35%;bottom:82px;transform:scale(.78);transform-origin:bottom center;filter:brightness(.86);z-index:3}
+.landmark-castle--3{right:7%;bottom:82px;transform:scale(1.02);transform-origin:bottom center;z-index:4}
+.landmark-castle--2 .landmark-castle__structure:before,.landmark-castle--2 .landmark-castle__structure i{background:linear-gradient(90deg,#315478,#6596b8,#315478)}
+.landmark-castle--2 .landmark-castle__structure i:before{background:#76a9ca}
+.landmark-castle--3 .landmark-castle__structure:before,.landmark-castle--3 .landmark-castle__structure i{background:linear-gradient(90deg,#69365f,#b76ca0,#69365f)}
+.landmark-castle--3 .landmark-castle__structure i:before{background:#d48bbd}
+.landmark-castle.is-selected{filter:brightness(1.2) drop-shadow(0 0 17px #f2baff99);z-index:6}
+.landmark-castle.is-selected .landmark-castle__structure{animation:castle-arrive .5s ease both}
+@keyframes castle-arrive{0%{transform:translateY(9px)}100%{transform:translateY(0)}}
+.castle-landscape__caption{position:absolute;z-index:7;left:0;right:0;bottom:12px;text-align:center;color:#d9c5e8;font:6px var(--pixel);text-shadow:0 2px 5px #000}
+.castle-story-panel{margin-top:22px;padding:24px;background:linear-gradient(120deg,#261735,#160e28);border:1px solid #805b9b;box-shadow:5px 5px 0 #0a0612;animation:world-arrive .35s ease both}
+.castle-story-panel__heading{display:flex;justify-content:space-between;align-items:center;color:var(--cyan);font:6px var(--pixel)}
+.castle-story-panel__seal{display:grid;place-items:center;width:35px;height:35px;border:1px solid #b88dd5;border-radius:50%;color:var(--pink);font-size:18px}
+.castle-story-panel h3{margin:13px 0 5px;font:700 25px var(--sans);color:#fff}
+.castle-story-panel h4{margin:0 0 13px;color:var(--pink);font:7px var(--pixel)}
+.castle-story-panel__story{color:#c6b7d5;font:10px/1.9 var(--mono)}
+.castle-guide--character{margin-top:18px;background:#100b1d}
+.guide-person{font-size:27px;color:#ffe1a5;text-shadow:0 0 12px #f8b7e9}
+.castle-world__controls{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}
+.castle-world__controls button{display:flex;align-items:center;gap:6px;padding:10px 12px;border:1px solid var(--line);background:#1b1030;color:#bba9ce;font:6px var(--pixel);cursor:pointer}
+.castle-world__controls button.is-active{border-color:var(--pink);color:var(--pink);background:#392047}
+
+/* Dr. Byte is a visible scientist character, not just a lab icon */
+.lab-scene{height:270px;position:relative;overflow:hidden;margin-bottom:28px;border:1px solid #8c659e;background:linear-gradient(180deg,#151b35,#34254b 72%,#1b132b);box-shadow:inset 0 0 45px #0005}
+.lab-scene:after{content:"";position:absolute;bottom:0;left:0;right:0;height:35px;background:repeating-linear-gradient(90deg,#4d3159 0 30px,#382442 30px 60px);border-top:3px solid #a47bb8}
+.lab-scene__window{position:absolute;top:20px;left:7%;width:145px;height:100px;border:7px solid #70538a;border-radius:50% 50% 0 0;background:linear-gradient(#101c39,#4c4a73);display:flex;justify-content:space-around;padding-top:15px;color:#fff}
+.lab-scene__window span{animation:twinkle 1.8s infinite alternate}
+.lab-scene__bench{position:absolute;z-index:2;bottom:34px;right:4%;width:40%;height:70px;border-top:7px solid #b78acb;background:linear-gradient(90deg,#3a2448,#21172f);display:flex;align-items:flex-start;justify-content:space-around}
+.lab-scene__bench i{width:24px;height:35px;margin-top:-40px;border:2px solid #a4eced;border-radius:5px 5px 12px 12px;background:linear-gradient(transparent 45%,#5cd6d566 45%);box-shadow:0 0 12px #6deaff55}
+.scientist-character{position:absolute;z-index:4;left:27%;bottom:29px;width:130px;height:205px;animation:scientist-idle 3.5s ease-in-out infinite}
+.scientist-character__head{position:absolute;z-index:3;top:32px;left:30px;width:70px;height:75px;border:3px solid #422c4d;border-radius:43% 43% 48% 48%;background:linear-gradient(135deg,#ffd8b5,#c88e79);box-shadow:inset -8px -5px #a96f70}
+.scientist-character__head:before{content:"";position:absolute;top:19px;left:13px;width:10px;height:7px;border-radius:50%;background:#2c2033;box-shadow:31px 0 #2c2033}
+.scientist-character__head:after{content:"";position:absolute;top:-15px;left:-7px;width:78px;height:30px;border-radius:50% 50% 20% 20%;background:#e5e9ed;border:3px solid #a9b4c9;box-shadow:inset 0 -8px #c1cbd7}
+.scientist-character__head i{position:absolute;z-index:2;top:41px;left:18px;width:8px;height:4px;border-radius:50%;background:#7d3e49}
+.scientist-character__head i:nth-child(2){left:43px}
+.scientist-character__head b{position:absolute;top:51px;left:30px;width:12px;height:5px;border-bottom:2px solid #8c3c56;border-radius:50%}
+.scientist-character__hair{position:absolute;z-index:4;top:14px;left:30px;width:70px;height:26px;border-radius:50% 50% 0 0;background:#f1f4f7;transform:rotate(-8deg)}
+.scientist-character__coat{position:absolute;z-index:2;top:99px;left:12px;width:105px;height:105px;background:linear-gradient(90deg,#dce5f0,#fff,#b9c9dc);clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);border-top:4px solid #8ab8d5;display:flex;justify-content:center;padding-top:23px;color:#53728c;font:9px var(--pixel)}
+.scientist-character__arm{position:absolute;z-index:5;top:111px;right:-1px;width:48px;height:17px;border-radius:12px;background:#ffd2b0;transform:rotate(-26deg);transform-origin:left center}
+@keyframes scientist-idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.scientist-speech{position:absolute;z-index:5;top:28px;left:44%;right:5%;padding:15px 18px;background:#f5e9ff;color:#26152f;border:2px solid #c69be0;box-shadow:5px 5px 0 #10091f;border-radius:12px 12px 12px 2px}
+.scientist-speech:before{content:"";position:absolute;left:-13px;top:35px;border-width:10px 13px 10px 0;border-style:solid;border-color:transparent #c69be0 transparent transparent}
+.scientist-speech>span{font:6px var(--pixel);color:#754c91}
+.scientist-speech p{margin:9px 0 0;font:10px/1.8 var(--mono);color:#392947}
+.lab-scene__title{position:absolute;z-index:6;left:15px;bottom:12px;display:flex;align-items:center;gap:7px;color:#d9b6f0;font:6px var(--pixel)}
+.project-card--chosen{border-color:var(--cyan)!important;box-shadow:0 0 0 2px #78e8f544,0 0 25px #78e8f533!important;transform:translateY(-3px)}
+.project-modal{animation:world-arrive .3s ease both}
+@media(max-width:700px){
+ .ufo-command{grid-template-columns:1fr;gap:4px;padding:13px;min-height:0}
+ .ufo-command__sky{height:125px}
+ .ufo-craft{transform:scale(.78);animation:ufo-hover-mobile 3s ease-in-out infinite}
+ .ufo-beam-large{top:75px}
+ .ufo-command__message{padding:13px}
+ .ufo-command__message>span,.ufo-command__message small{font-size:5px;line-height:1.8}
+ .ufo-command__message h3{font-size:18px}
+ .ufo-command__message p{font-size:9px}
+ .castle-landscape{height:345px}
+ .castle-moon{width:47px;height:47px}
+ .landmark-castle{width:120px;height:190px;bottom:70px}
+ .landmark-castle__structure{height:130px;transform:scale(.72);transform-origin:bottom center}
+ .landmark-castle--1{left:-1%;bottom:58px;transform:scale(.57);transform-origin:bottom center}
+ .landmark-castle--2{left:27%;bottom:65px;transform:scale(.72);transform-origin:bottom center}
+ .landmark-castle--3{right:-3%;bottom:66px;transform:scale(.84);transform-origin:bottom center}
+ .landmark-castle__label,.landmark-castle__company{font-size:5px}
+ .landmark-castle__prompt{font-size:4px}
+ .castle-landscape__caption{font-size:4px;line-height:1.8;padding:0 8px}
+ .castle-story-panel{padding:16px}
+ .castle-story-panel h3{font-size:21px}
+ .castle-story-panel__heading{font-size:5px}
+ .castle-world__controls button{font-size:5px;padding:9px}
+ .lab-scene{height:315px}
+ .scientist-character{left:3%;transform:scale(.83);transform-origin:bottom left;bottom:25px}
+ .scientist-speech{left:34%;right:4%;top:25px;padding:11px}
+ .scientist-speech>span{font-size:5px;line-height:1.8}
+ .scientist-speech p{font-size:8px}
+ .lab-scene__window{left:4%;width:95px;height:72px}
+ .lab-scene__bench{width:44%;right:0}
+ .lab-scene__title{font-size:5px}
+}
+@keyframes ufo-hover-mobile{0%,100%{transform:scale(.78) translateY(0)}50%{transform:scale(.78) translateY(-9px)}}
+@media(prefers-reduced-motion:reduce){.level-transition,.level-heading,.ufo-craft,.scientist-character,.final-gate__portal,.level-nav-button--next:after{animation:none!important;transition:none!important}}

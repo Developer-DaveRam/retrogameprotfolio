@@ -691,3 +691,25 @@ body{background:#07131b;color:#effffb}
  .mission-selector button{font-size:5px;padding:9px}
 }
 @media(prefers-reduced-motion:reduce){.mission-node__signal{animation:none!important}.mission-node,.mission-selector button{transition:none!important}}
+
+
+/* Signal Run skyline and stronger page-to-page motion */
+.signal-tower{position:absolute;z-index:4;bottom:50px;width:95px;height:150px;display:flex;align-items:flex-end;justify-content:center;gap:7px;filter:drop-shadow(0 0 18px #65f0dc35)}
+.signal-tower:before{content:"";position:absolute;bottom:0;width:78px;height:88px;border:2px solid #65f0dc;background:linear-gradient(90deg,#123c47,#236a6b,#102d3a);clip-path:polygon(15% 0,85% 0,100% 100%,0 100%)}
+.signal-tower i{position:relative;z-index:2;width:18px;height:118px;border:2px solid #65f0dc;border-bottom:0;background:linear-gradient(90deg,#123c47,#367e79,#123c47);clip-path:polygon(50% 0,100% 18%,100% 100%,0 100%,0 18%)}
+.signal-tower i:before{content:"";position:absolute;left:6px;right:6px;top:35px;bottom:10px;background:repeating-linear-gradient(0deg,transparent 0 12px,#c6ff72 13px 15px,transparent 16px 24px);opacity:.55}
+.signal-tower b{position:absolute;z-index:3;bottom:0;width:25px;height:38px;border:2px solid #c6ff72;border-bottom:0;border-radius:16px 16px 0 0;background:#071a24}
+.signal-tower--left{left:18%;transform:scale(.72);transform-origin:bottom}
+.signal-tower--center{left:47%;transform:scale(1.08);transform-origin:bottom}
+.signal-tower--right{right:12%;transform:scale(.82);transform-origin:bottom}
+.signal-tower--center:after{content:"";position:absolute;top:-30px;width:2px;height:35px;background:#c6ff72;box-shadow:0 0 18px #c6ff72}
+.signal-tower--center i:after{content:"";position:absolute;top:12px;left:4px;width:6px;height:6px;border-radius:50%;background:#c6ff72;box-shadow:0 0 12px #c6ff72}
+.level-transition{animation:signal-arrive .85s cubic-bezier(.16,.82,.22,1) both}
+@keyframes signal-arrive{0%{opacity:0;transform:translateY(28px) scale(.985);filter:blur(10px)}48%{opacity:1;filter:blur(0)}72%{transform:translateY(-3px) scale(1.002)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+.level-heading{animation:signal-heading .7s cubic-bezier(.16,.82,.22,1) both}
+@keyframes signal-heading{from{opacity:0;transform:translateX(-30px);clip-path:inset(0 100% 0 0)}to{opacity:1;transform:translateX(0);clip-path:inset(0 0 0 0)}}
+.project-modal-backdrop{animation:modal-shade .25s ease both}
+.project-modal{animation:signal-arrive .45s cubic-bezier(.16,.82,.22,1) both}
+@keyframes modal-shade{from{opacity:0}to{opacity:1}}
+@media(max-width:640px){.signal-tower{transform:scale(.62)!important;transform-origin:bottom}.signal-tower--left{left:3%}.signal-tower--center{left:42%}.signal-tower--right{right:1%}}
+@media(prefers-reduced-motion:reduce){.level-transition,.level-heading,.project-modal-backdrop,.project-modal{animation:none!important}}

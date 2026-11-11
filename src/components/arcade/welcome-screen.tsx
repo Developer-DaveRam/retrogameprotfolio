@@ -28,9 +28,9 @@ export function WelcomeScreen({ onStart, onSkip }: WelcomeScreenProps) {
       </div>
       <div className="pixel-landscape" aria-hidden="true">
         <div className="mountain mountain-one" /><div className="mountain mountain-two" />
-        <div className="kingdom-castle kingdom-castle--left"><i/><i/><i/><b/></div>
-        <div className="kingdom-castle kingdom-castle--center"><i/><i/><i/><b/></div>
-        <div className="kingdom-castle kingdom-castle--right"><i/><i/><i/><b/></div>
+        <div className="signal-tower signal-tower--left"><i/><i/><b/></div>
+        <div className="signal-tower signal-tower--center"><i/><i/><b/></div>
+        <div className="signal-tower signal-tower--right"><i/><i/><b/></div>
         <div className="city-back">{Array.from({ length: 12 }, (_, i) => <div key={i} className={`building building-${i % 5}`} />)}</div>
         <div className="city-front">{Array.from({ length: 10 }, (_, i) => <div key={i} className={`front-building front-building-${i % 4}`} />)}</div>
         <div className="ground-line" /><div className="ground" />

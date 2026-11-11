@@ -1,49 +1,37 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Castle, ChevronDown, FlaskConical, ScrollText } from "lucide-react";
+import { CheckCircle2, ChevronRight, Sparkles } from "lucide-react";
 import { experience } from "@/data/portfolio";
 
-const guides = [ScrollText, FlaskConical, Castle];
-
 export function ExperienceScreen() {
-  const [opened, setOpened] = useState("CASTLE 03");
+  const [opened, setOpened] = useState(2);
+  const castle = experience.castles[opened];
   return (
-    <div className="level-content castle-journey">
-      <div className="castle-intro">
-        <span className="castle-intro__sigil">✦</span>
-        <p>{experience.intro}</p>
-        <span className="castle-intro__count">3 WORLDS · ONE DEVELOPER JOURNEY</span>
+    <div className="level-content castle-world">
+      <div className="castle-world__intro"><Sparkles size={15}/><p>Three chapters. Three strongholds. Follow the road through my developer journey.</p></div>
+      <div className="castle-landscape" aria-label="Choose an experience castle">
+        <div className="castle-moon"/><div className="castle-mountains castle-mountains--back"/><div className="castle-mountains castle-mountains--front"/>
+        <div className="castle-road"/>
+        {experience.castles.map((item,index)=><button key={item.number} type="button" onClick={()=>setOpened(index)} aria-pressed={opened===index} className={`landmark-castle landmark-castle--${index+1} ${opened===index?"is-selected":""}`}>
+          <span className="landmark-castle__label">{item.number}</span><span className="landmark-castle__structure"><i/><i/><i/><b/></span><span className="landmark-castle__company">{item.company}</span><span className="landmark-castle__prompt">{opened===index?"SELECTED":"ENTER CASTLE ↗"}</span>
+        </button>)}
+        <div className="castle-landscape__caption">THE KINGDOM OF EXPERIENCE / SELECT A CASTLE TO TRAVEL THERE</div>
       </div>
-      <div className="castle-timeline">
-        {experience.castles.map((castle, index) => {
-          const Guide = guides[index] ?? Castle;
-          const isOpen = opened === castle.number;
-          return (
-            <article className={`castle-card castle-card--${index + 1} ${isOpen ? "is-open" : ""}`} key={castle.number}>
-              <div className="castle-card__tower" aria-hidden="true">
-                <div className="castle-card__flag">✦</div><div className="castle-card__roof" />
-                <div className="castle-card__body"><span /><span /><span /></div><div className="castle-card__base" />
-              </div>
-              <div className="castle-card__content">
-                <button className="castle-card__toggle" type="button" onClick={() => setOpened(isOpen ? "" : castle.number)} aria-expanded={isOpen}>
-                  <span className="castle-card__number">{castle.number}</span><span className="castle-card__period">{castle.period}</span><ChevronDown className="castle-card__chevron" size={18} />
-                </button>
-                <h3>{castle.role}</h3><h4>{castle.company} <span>· {castle.location}</span></h4>
-                <p className="castle-card__story">{castle.story}</p>
-                {isOpen && <div className="castle-card__details">
-                  <div className="castle-guide"><div className="castle-guide__avatar"><Guide size={22} /></div><div><span>YOUR CASTLE GUIDE</span><p>{castle.guide}</p></div></div>
-                  <div className="castle-achievements"><span className="castle-achievements__title">QUESTS COMPLETED / SKILLS UNLOCKED</span>
-                    {castle.achievements.map((item) => <div key={item}><CheckCircle2 size={15} />{item}</div>)}
-                  </div>
-                </div>}
-                {!isOpen && <span className="castle-card__hint">OPEN CASTLE TO EXPLORE QUESTS ↗</span>}
-              </div>
-            </article>
-          );
-        })}
-      </div>
-      <p className="interaction-hint">TAP EACH CASTLE TO MEET ITS GUIDE AND DISCOVER THE JOURNEY</p>
+      <article className="castle-story-panel">
+        <div className="castle-story-panel__heading"><span>{castle.number} / {castle.period}</span><span className="castle-story-panel__seal">✦</span></div>
+        <h3>{castle.role}</h3><h4>{castle.company} · {castle.location}</h4>
+        <p className="castle-story-panel__story">{castle.story}</p>
+        <div className="castle-guide castle-guide--character">
+          <div className="castle-guide__avatar"><span className="guide-person">♟</span></div>
+          <div><span>CASTLE KEEPER'S STORY</span><p>{castle.guide}</p></div>
+        </div>
+        <div className="castle-achievements"><span className="castle-achievements__title">QUESTS COMPLETED / SKILLS UNLOCKED</span>
+          {castle.achievements.map((item)=><div key={item}><CheckCircle2 size={15}/>{item}</div>)}
+        </div>
+      </article>
+      <div className="castle-world__controls">{experience.castles.map((item,index)=><button key={item.number} type="button" className={opened===index?"is-active":""} onClick={()=>setOpened(index)}>{String(index+1).padStart(2,"0")} <ChevronRight size={13}/> {item.company}</button>)}</div>
+      <p className="interaction-hint">CLICK A CASTLE IN THE DISTANCE TO TRAVEL TO THAT CHAPTER</p>
     </div>
   );
 }

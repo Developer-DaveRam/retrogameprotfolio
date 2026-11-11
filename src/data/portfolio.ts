@@ -99,43 +99,43 @@ export const projects = [
 ];
 
 export const experience = {
-  intro: "Every castle marks a new chapter: learning the foundations, building real products, and taking ownership of production software.",
-  castles: [
+  intro: "A timeline of real work: from first team experience to building and supporting production software.",
+  missions: [
     {
-      number: "CASTLE 01",
+      number: "MISSION 01",
       period: "JAN 2024 — MAR 2024",
       role: "WordPress Intern",
       company: "GAOGAO",
-      location: "Internship",
-      story: "The first gate into professional software work. Learned how a live content workflow is maintained and contributed to WordPress content uploads.",
+      location: "INTERNSHIP",
+      story: "First professional mission: learning how a live website is maintained, how content moves through a team workflow, and why small delivery details matter.",
       achievements: [
-        "Worked with WordPress content management workflows.",
+        "Worked with WordPress content-management workflows.",
         "Uploaded and organized website content.",
-        "Built early experience working with a team and delivery tasks.",
+        "Built early experience collaborating with a team and completing delivery tasks."
       ],
-      guide: "The Archivist: 'A kingdom is built one well-organized page at a time. This is where the journey began.'",
+      guide: "FIELD NOTE: Strong products are built from the details people depend on every day."
     },
     {
-      number: "CASTLE 02",
+      number: "MISSION 02",
       period: "JUL 2024 — AUG 2024",
       role: "Software Development Intern",
       company: "NAFNAF",
-      location: "Internship",
-      story: "Moved from content workflows into application development, contributing to a shared-meals application using C# and .NET.",
+      location: "INTERNSHIP",
+      story: "The next mission moved closer to application engineering. I contributed to a shared-meals application and explored how backend logic, APIs and stored data connect.",
       achievements: [
         "Worked on a shared-meals application using C# and .NET.",
         "Contributed to database and API-related tasks.",
-        "Learned how backend logic connects application features with stored data.",
+        "Learned how backend logic connects application features with stored data."
       ],
-      guide: "The Scientist: 'You have discovered the power of logic. Now make the data and the application speak to each other.'",
+      guide: "FIELD NOTE: An interface is only the surface. The system underneath makes it work."
     },
     {
-      number: "CASTLE 03",
+      number: "MISSION 03",
       period: "DEC 2024 — PRESENT",
       role: "Full Stack Developer",
       company: "Skyraan Technologies",
-      location: "Coimbatore · Full-time",
-      story: "The main stronghold: building and maintaining SaaS application features, backend APIs, database workflows and responsive interfaces.",
+      location: "COIMBATORE · FULL-TIME",
+      story: "Current mission: developing business software across APIs, data models, user interfaces and background workflows. My work spans day-to-day feature delivery as well as understanding how services behave together in a SaaS environment.",
       achievements: [
         "Developing backend services and REST APIs with Node.js, Express and TypeScript.",
         "Building frontend features with React, Next.js and Tailwind CSS.",
@@ -143,9 +143,9 @@ export const experience = {
         "Contributing to multi-tenant SaaS architecture and tenant-aware database access.",
         "Working on attendance, leave, shift and work-week modules in an HRMS platform.",
         "Using Redis and BullMQ for background jobs and scheduled processing.",
-        "Working with Git, deployment environments and production debugging.",
+        "Working with Git, deployment environments and production debugging."
       ],
-      guide: "The Chief Scientist: 'The final castle is not the end. It is where every skill becomes a system people can rely on.'",
-    },
-  ],
+      guide: "FIELD NOTE: The real milestone is not shipping a screen. It is building a system people can rely on."
+    }
+  ]
 };

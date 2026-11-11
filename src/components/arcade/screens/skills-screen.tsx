@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Braces, Code2, Database, Server, Wrench, Zap, Radio, Sparkles } from "lucide-react";
+import { Braces, Code2, Database, Server, Wrench, Zap, Radio, Sparkles, Satellite } from "lucide-react";
 import { skills } from "@/data/portfolio";
 
 const filters = ["ALL", "LANGUAGE", "FRONTEND", "BACKEND", "DATABASE", "SYSTEMS", "TOOLS"];
@@ -14,13 +14,17 @@ export function SkillsScreen() {
   const activeSkill = skills.find((skill) => skill.name === selected);
   return (
     <div className="level-content alien-lab">
-      <div className="alien-transmission">
-        <div className="alien-transmission__ufo"><span /><span /><span /><Radio size={19} /></div>
-        <div className="alien-transmission__copy">
-          <span><Sparkles size={13} /> INCOMING TRANSMISSION / GALAXY-07</span>
-          <h3>Greetings, Earth developer!</h3>
-          <p>"I scanned your technology inventory. These are the power cores you use to build applications, connect systems and solve real-world problems. Select any core and I will decode it for you."</p>
-          <small>— ZOR-BIT, YOUR FRIENDLY SKILLS ALIEN</small>
+      <div className="ufo-command">
+        <div className="ufo-command__sky">
+          <div className="ufo-beam-large" />
+          <div className="ufo-craft"><div className="ufo-craft__dome"><span className="alien-head">◕‿◕</span></div><div className="ufo-craft__saucer"><i/><i/><i/><i/><i/></div><div className="ufo-craft__rim"/></div>
+          <div className="ufo-command__stars">✦　　 ·　　✧　　　·　 ✦</div>
+        </div>
+        <div className="ufo-command__message">
+          <span><Radio size={13}/> LIVE TRANSMISSION / GALAXY-07</span>
+          <h3>{activeSkill ? `Scanning: ${activeSkill.name}` : "Earthling! Welcome aboard."}</h3>
+          <p>{activeSkill ? `“Ah, ${activeSkill.name}! I detected this power core in your developer inventory. ${activeSkill.note} That's how you turn ideas into working technology!”` : "“I travelled across galaxies to inspect your developer power cores. Choose any glowing skill below. My scanner will reveal what it does and how you use it. Take a look, human!”"}</p>
+          <small>— ZOR-BIT / ALIEN TECHNOLOGY GUIDE</small>
         </div>
       </div>
       <div className="filter-bar" aria-label="Filter skills">
@@ -32,12 +36,12 @@ export function SkillsScreen() {
           return <button className={selected === skill.name ? "skill-card skill-card--selected" : "skill-card"} key={skill.name} onClick={() => setSelected(selected === skill.name ? null : skill.name)} type="button" aria-pressed={selected === skill.name}>
             <div className="skill-card-top"><span>{skill.category}</span><span>{String(index + 1).padStart(2, "0")}</span></div>
             <div className="skill-icon"><Icon /></div><h3>{skill.name}</h3>
-            <div className="skill-card-bottom"><span className="skill-level"><i /> {skill.level}</span><span>DECODE ↗</span></div>
+            <div className="skill-card-bottom"><span className="skill-level"><i /> {skill.level}</span><span>SCAN ↗</span></div>
           </button>;
         })}
       </div>
-      {activeSkill && <aside className="detail-panel alien-detail"><span className="detail-panel__eyebrow">ZOR-BIT'S SCAN / {activeSkill.category}</span><h3>{activeSkill.name}</h3><p>{activeSkill.note}</p><span className="detail-panel__status">● {activeSkill.level} — POWER CORE ACTIVE</span></aside>}
-      <p className="interaction-hint">SELECT A POWER CORE · FILTER BY TECHNOLOGY · ASK THE ALIEN TO DECODE IT</p>
+      {activeSkill && <aside className="detail-panel alien-detail"><span className="detail-panel__eyebrow"><Satellite size={13}/> ZOR-BIT'S SCAN / {activeSkill.category}</span><h3>{activeSkill.name}</h3><p>{activeSkill.note}</p><span className="detail-panel__status">● {activeSkill.level} — POWER CORE ACTIVE</span></aside>}
+      <p className="interaction-hint">CHOOSE A POWER CORE · ZOR-BIT WILL EXPLAIN IT FROM THE UFO</p>
     </div>
   );
 }

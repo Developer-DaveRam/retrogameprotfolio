@@ -2,14 +2,14 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Daveram A — The Developer Kingdom | Interactive Portfolio",
+  title: "Daveram A — Signal Run | Interactive Developer Portfolio",
   description:
-    "Enter the fantasy arcade portfolio of Daveram A. Explore three career castles, an alien-guided technology galaxy, project laboratory and final contact gate.",
-  applicationName: "Daveram Developer Kingdom",
+    "Explore Daveram A's interactive developer portfolio: career missions, an alien-guided technology inventory, engineering build reviews and contact links.",
+  applicationName: "Daveram Signal Run",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#10091f",
+  themeColor: "#07131b",
   width: "device-width",
   initialScale: 1,
 };

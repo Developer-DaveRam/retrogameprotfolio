@@ -1,9 +1,9 @@
 export const levels = [
-  { id: "profile", number: "01", label: "THE KINGDOM", title: "MEET THE PLAYER" },
+  { id: "profile", number: "01", label: "PLAYER PROFILE", title: "MEET THE PLAYER" },
   { id: "skills", number: "02", label: "ALIEN TECH", title: "THE POWER CORE" },
-  { id: "experience", number: "03", label: "THREE CASTLES", title: "MY JOURNEY" },
-  { id: "projects", number: "04", label: "BUILD ARCHIVE", title: "CREATIONS" },
-  { id: "contact", number: "05", label: "FINAL GATE", title: "LET'S CONNECT" },
+  { id: "experience", number: "03", label: "CAREER MISSIONS", title: "THE FLIGHT PATH" },
+  { id: "projects", number: "04", label: "BUILD REVIEWS", title: "WHAT I HAVE BUILT" },
+  { id: "contact", number: "05", label: "CONTACT CHANNEL", title: "LET'S CONNECT" },
 ] as const;
 
 export const skills = [

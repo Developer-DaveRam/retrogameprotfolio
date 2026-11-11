@@ -341,3 +341,45 @@ button{font:inherit}
  .scientist-brief__portrait span{font-size:5px}
  .project-modal .scientist-quote{font-size:9px}
 }
+
+
+/* Opening kingdom silhouette, player dossier and final contact gate */
+.kingdom-castle{position:absolute;z-index:1;bottom:54px;width:180px;height:190px;display:flex;align-items:flex-end;justify-content:center;gap:7px;opacity:.95;filter:drop-shadow(0 0 16px #b47be933)}
+.kingdom-castle:before{content:"";position:absolute;bottom:0;width:100%;height:112px;background:linear-gradient(90deg,#2d1746,#563474,#2d1746);border:3px solid #8057a3;border-bottom:0}
+.kingdom-castle i{position:relative;z-index:2;width:38px;height:145px;background:linear-gradient(90deg,#39204f,#69458a,#39204f);border:3px solid #9d70bd;border-bottom:0}
+.kingdom-castle i:before{content:"";position:absolute;top:-28px;left:-4px;width:38px;height:30px;background:#9c70bd;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.kingdom-castle i:after{content:"";position:absolute;top:58px;left:10px;width:12px;height:23px;border-radius:10px 10px 0 0;background:#f9d69b;box-shadow:0 0 13px #f9d69b}
+.kingdom-castle b{position:absolute;z-index:3;bottom:0;width:38px;height:58px;border:3px solid #bd8bda;border-bottom:0;border-radius:22px 22px 0 0;background:#170d29}
+.kingdom-castle--left{left:9%;transform:scale(.72);transform-origin:bottom center}
+.kingdom-castle--center{left:43%;transform:scale(1.02);transform-origin:bottom center}
+.kingdom-castle--right{right:8%;transform:scale(.82);transform-origin:bottom center}
+.kingdom-castle--center:before{background:linear-gradient(90deg,#38204f,#714b91,#38204f);border-color:#d39ce8}
+.kingdom-castle--center i{height:164px;border-color:#c795e1}
+.kingdom-castle--center i:before{background:#c795e1}
+.kingdom-castle--center b{height:69px;border-color:#e2b4f4}
+.profile-crown{position:absolute;top:11px;right:20px;color:#ffe5a4;font-size:26px;text-shadow:0 0 13px #ffe5a4}
+.profile-facts{display:grid;gap:9px;margin-top:19px;padding-top:15px;border-top:1px solid var(--line)}
+.profile-facts span{display:flex;align-items:center;gap:8px;color:#bba9ce;font:6px var(--pixel)}
+.profile-facts svg{color:var(--cyan)}
+.profile-education{margin-top:22px!important;padding:12px 14px;border-left:2px solid var(--cyan);background:#1b102d;color:#c5b2d5!important;font:6px/1.9 var(--pixel)!important}
+.profile-stat-note{display:block;margin-top:10px;color:#877598;font:6px var(--mono)}
+.final-gate__portal{display:flex;align-items:center;justify-content:center;gap:24px;width:130px;height:130px;margin:0 auto 22px;border:1px solid #946bc1;border-radius:50%;background:radial-gradient(circle,#71469b55,#160d27 70%);box-shadow:0 0 0 9px #a987ff0b,0 0 45px #a987ff44;animation:portal-pulse 3s ease-in-out infinite}
+.final-gate__portal span{color:var(--pink);font-size:21px;text-shadow:0 0 14px var(--pink)}
+.final-gate__portal span:nth-child(2){font-size:34px;color:var(--cyan)}
+.final-gate__eyebrow{font:7px var(--pixel);color:var(--cyan);letter-spacing:1px}
+.final-gate h3{margin:20px 0!important}
+.final-gate>p:not(.contact-note){max-width:640px}
+.final-gate .contact-note{justify-content:center;line-height:2}
+@keyframes portal-pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 9px #a987ff0b,0 0 45px #a987ff44}50%{transform:scale(1.04);box-shadow:0 0 0 15px #a987ff0b,0 0 60px #a987ff66}}
+@media(max-width:640px){
+ .kingdom-castle{transform:scale(.56)!important;transform-origin:bottom center}
+ .kingdom-castle--left{left:-2%}
+ .kingdom-castle--center{left:34%}
+ .kingdom-castle--right{right:-4%}
+ .profile-facts span{font-size:5px}
+ .profile-education{font-size:5px!important}
+ .final-gate__portal{width:94px;height:94px;margin-bottom:17px}
+ .final-gate__portal span{font-size:16px}
+ .final-gate__portal span:nth-child(2){font-size:25px}
+ .final-gate__eyebrow{font-size:5px}
+}
